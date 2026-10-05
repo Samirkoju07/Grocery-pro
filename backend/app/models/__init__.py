@@ -1,0 +1,121 @@
+"""All SQLAlchemy models exported from a single package for Alembic discovery."""
+from app.models.audit import AuditLog
+from app.models.auth import (
+    Permission,
+    RefreshToken,
+    Role,
+    RolePermission,
+    User,
+    UserRole,
+    UserSession,
+)
+from app.models.base import AuditMixin, SoftDeleteMixin, TimestampMixin, UUIDMixin
+from app.models.cash import CashSession, CashTransaction, Expense
+from app.models.customer import Customer, CustomerLedger, CustomerPayment
+from app.models.inventory import (
+    Inventory,
+    InventoryTransaction,
+    StockAdjustment,
+    StockBatch,
+    StockCount,
+    StockCountItem,
+    StockTransfer,
+    StockTransferItem,
+)
+from app.models.loyalty import LoyaltyAccount, LoyaltyTransaction
+from app.models.notification import Notification
+from app.models.organization import Branch, Company, POSCounter, Warehouse
+from app.models.product import (
+    Brand,
+    Category,
+    Product,
+    ProductBarcode,
+    ProductPrice,
+    TaxConfiguration,
+    Unit,
+)
+from app.models.promotion import (
+    Coupon,
+    Promotion,
+    PromotionCategory,
+    PromotionProduct,
+)
+from app.models.purchase import (
+    GoodsReceivedItem,
+    GoodsReceivedNote,
+    PurchaseInvoice,
+    PurchaseInvoiceItem,
+    PurchaseOrder,
+    PurchaseOrderItem,
+    PurchaseReturn,
+    PurchaseReturnItem,
+    Supplier,
+)
+from app.models.sales import (
+    Payment,
+    SalesInvoice,
+    SalesInvoiceItem,
+    SalesReturn,
+    SalesReturnItem,
+)
+
+__all__ = [
+    "AuditMixin",
+    "SoftDeleteMixin",
+    "TimestampMixin",
+    "UUIDMixin",
+    "Company",
+    "Branch",
+    "Warehouse",
+    "POSCounter",
+    "User",
+    "Role",
+    "Permission",
+    "RolePermission",
+    "UserRole",
+    "RefreshToken",
+    "UserSession",
+    "Category",
+    "Brand",
+    "Unit",
+    "TaxConfiguration",
+    "Product",
+    "ProductBarcode",
+    "ProductPrice",
+    "Inventory",
+    "StockBatch",
+    "InventoryTransaction",
+    "StockAdjustment",
+    "StockCount",
+    "StockCountItem",
+    "StockTransfer",
+    "StockTransferItem",
+    "Supplier",
+    "PurchaseOrder",
+    "PurchaseOrderItem",
+    "GoodsReceivedNote",
+    "GoodsReceivedItem",
+    "PurchaseInvoice",
+    "PurchaseInvoiceItem",
+    "PurchaseReturn",
+    "PurchaseReturnItem",
+    "Customer",
+    "CustomerLedger",
+    "CustomerPayment",
+    "SalesInvoice",
+    "SalesInvoiceItem",
+    "SalesReturn",
+    "SalesReturnItem",
+    "Payment",
+    "CashSession",
+    "CashTransaction",
+    "Expense",
+    "Promotion",
+    "PromotionProduct",
+    "PromotionCategory",
+    "Coupon",
+    "LoyaltyAccount",
+    "LoyaltyTransaction",
+    "AuditLog",
+    "Notification",
+]

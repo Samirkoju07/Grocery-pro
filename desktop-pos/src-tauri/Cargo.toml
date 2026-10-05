@@ -1,0 +1,26 @@
+[package]
+name = "grocery-pos"
+version = "1.0.0"
+description = "Grocery POS Desktop Application"
+authors = ["Grocery POS Team"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[build-dependencies]
+tauri-build = { version = "1.5", features = [] }
+
+[dependencies]
+tauri = { version = "1.8", features = [
+  "dialog-all",
+  "fs-all",
+  "http-all",
+  "notification-all",
+  "os-all",
+  "protocol-asset",
+  "shell-open",
+  "window-all",
+  "clipboard-all"
+] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
